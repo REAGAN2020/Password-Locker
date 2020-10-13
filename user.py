@@ -25,7 +25,7 @@ class User:
     @classmethod
     def find_by_name(cls, name):
         for user in cls.user_list:
-            if user in cls.user_list == name:
+            if user.user_name == name:
                 return user
 
 
@@ -33,4 +33,20 @@ class User:
     def user_exist(cls, name):
         '''
         method that checks if user exists
+        Args:
+            name: searching if uer exists
+        Returns :
+            Boolean: will return true or false if the user exists or not
         '''
+        for user in cls.user_list:
+            if user.password == name:
+                return user
+
+        return False
+
+    @classmethod
+    def funcname(parameter_list):
+        """
+        docstring
+        """
+        pass
