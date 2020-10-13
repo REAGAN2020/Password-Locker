@@ -38,19 +38,19 @@ class TestCredentials(unittest.TestCase):
         test_credentials = Credentials("reagan", "password123", "reagan@gmail.com")
         test_credentials.save_credentials()
            
-    #     test_credentials.save_credentials()
-    #     self.assertEqual(len(Credentials.credentials_list), 2)
+  
+        self.assertEqual(len(Credentials.credentials_list), 2)
 
-    # def test_delete_credentials(self):
-    #     '''
-    #         test_delete_account to test if we can remove an account from our account list
-    #         '''
-    #     self.new_credentials.save_credentials()
-    #     test_credentials = Credentials("reagan", "password123", "reagan@gmail.com")
-    #     test_credentials.save_credentials()
+    def test_delete_credentials(self):
+        '''
+            test_delete_account to test if we can remove an account from our account list
+            '''
+        self.new_credentials.save_credentials()
+        test_credentials = Credentials("reagan", "password123", "reagan@gmail.com")
+        test_credentials.save_credentials()
 
-    #     self.new_credentials.delete_credentials()  # Deleting an account object
-    #     self.assertEqual(len(Credentials.credentials_list), 1)
+        self.new_credentials.delete_credentials()  # Deleting an account object
+        self.assertEqual(len(Credentials.credentials_list), 1)
 
     
 
