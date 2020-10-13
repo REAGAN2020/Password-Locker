@@ -15,13 +15,13 @@ class TestCredentials(unittest.TestCase):
         self.assertEqual(self.new_credentials.password, "password123")
         self.assertEqual(self.new_credentials.email, "reagan@gmail.com")
 
-    # def test_save_credentials(self):
-    #     '''
-    #     test_save_account test case to test if the account object is saved into
-    #      the account list
-    #     '''
-    #     self.new_credentials.save_credentials()  
-    #     self.assertEqual(len(Credentials.credentials_list), 1)
+    def test_save_credentials(self):
+        '''
+        test_save_account test case to test if the account object is saved into
+         the account list
+        '''
+        self.new_credentials.save_credentials()  
+        self.assertEqual(len(Credentials.credentials_list), 1)
 
     # def tearDown(self):
     #         '''
