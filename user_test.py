@@ -36,7 +36,16 @@ class TestAccount(unittest.TestCase):
         self.new_user.save_user()
         test_user = User("facebook", "reagan", "pasword123", "reagan@gmail.com")  #new account
         test_user.save_user()
-        self.assertEqual(len(User.user_list),2)
-
+        self.assertEqual(len(User.user_list), 2)
+        
+    def test_delete_user(self):
+        '''
+        test_delete is testing if we can delete our user from our user list
+        '''
+        self.new_user.save_user()
+        test_user = User("facebook", "reagan", "pasword123", "reagan@gmail.com")
+        test_user.save_user()
+        #======deleting function=======
+        
 if __name__ == '__main__':
     unittest.main()
