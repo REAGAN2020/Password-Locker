@@ -4,7 +4,8 @@ class User:
     """
     user_list = [] #empty user list
 
-    def __init__(self,user_name,password,email):
+    def __init__(self,acc_name,user_name,password,email):
+        self.acc_name = acc_name
         self.user_name = user_name
         self.password = password
         self.email = email
@@ -25,7 +26,7 @@ class User:
     @classmethod
     def find_by_name(cls, name):
         for user in cls.user_list:
-            if user.user_name == name:
+            if user.acc_name == name:
                 return user
 
 
