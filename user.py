@@ -46,7 +46,7 @@ class User:
         return False
 
     @classmethod
-    def display_account(cls):
+    def display_users(cls):
         """
         this method returns the account list
         """

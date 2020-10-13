@@ -62,16 +62,25 @@ class TestAccount(unittest.TestCase):
         self.assertEqual(get_user.email,test_user.email)
 
 
-    def test_user_exist(self):
+    def test_user_exists(self):
         '''
-        testing if account fu
+        testing if user exists and if it can return a boolean if not found
+        '''
+        self.new_user.save_user()
+        test_user = User("facebook", "reagan", "pasword123", "reagan@gmail.com")
+        test_user.save_user()
 
+        #=====testing if user exits=======
+        user_exists = User.user_exist("pasword123")
+        self.assertTrue(user_exists)
 
-
-
-
-
-
+    def test_display_users(self):
+        '''
+        this method returns all the users saved
+        '''
+        displayed = User.display_users()
+        self.assertEqual(displayed,User.user_list)
+       
 
 if __name__ == '__main__':
     unittest.main()
