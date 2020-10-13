@@ -46,6 +46,32 @@ class TestAccount(unittest.TestCase):
         test_user = User("facebook", "reagan", "pasword123", "reagan@gmail.com")
         test_user.save_user()
         #======deleting function=======
+        self.new_user.delete_user()
+        self.assertEqual(len(User.user_list), 1)
         
+    def test_find_user_by_user_name(self):
+        '''
+        test find user by name, checking if we can  find user by name and display info
+        '''
+        self.new_user.save_user()
+        test_user = User("facebook", "reagan", "pasword123", "reagan@gmail.com")
+        test_user.save_user()
+        
+        #=======finding user=========
+        get_user = User.find_by_name("facebook")
+        self.assertEqual(get_user.email,test_user.email)
+
+
+    def test_user_exist(self):
+        '''
+        testing if account fu
+
+
+
+
+
+
+
+
 if __name__ == '__main__':
     unittest.main()
