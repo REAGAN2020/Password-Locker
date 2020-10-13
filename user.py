@@ -45,8 +45,8 @@ class User:
         return False
 
     @classmethod
-    def funcname(parameter_list):
+    def display_account(cls):
         """
-        docstring
+        this method returns the account list
         """
-        pass
+      return cls.account_list 
