@@ -88,110 +88,110 @@ def display_credentials():
     return Credentials.display_credentials()
 
 
-# def main():
-#     print("Hello welcome to password locker.What is your name")
-#     user_name = input()
-#     print(
-#         f"Hello {user_name}, sign up to Password Locker to create an account.")
-#     print('\n')
-#     while True:
-#         print("To continue please select one of these short codes :\n su for Sign Up.\n da for display your account.\n ln for login.\n ex for exit. ")
-#         short_code = input().lower()
-#         if short_code == 'su':
-#             print("Create an  Account")
-#             print("_"*100)
-#             acc_name = input('Account name:')
-#             print('\n')
-#             user_name = input('User name:')
-#             print('\n')
-#             pwd = input('Password : ')
-#             print('\n')
-#             e_address = input('Email address:')
-#             save_user(create_user(acc_name, user_name, pwd, e_address))
-#             print('\n')
-#             print(
-#                 f"A New {acc_name} Account with the user name  {user_name} has been created.")
-#             print(
-#                 f"You can now login to your {acc_name} account using your password.")
-#             print('\n')
-#         elif short_code == 'da':
-#             if display_user():
-#                 print("Thank you for signing up. here are your login credentials")
-#                 print('\n')
-#                 for user in display_user():
-#                      print(
-#                          f"User name:{user.acc_name}  User name: {user.user_name} Password:{user.password}")
-#                      print('\n')
-#             else:
-#                 print('\n')
-#                 print(
-#                      "You dont seem to have created an account.Sign up to create a new account.")
-#                 print('\n')
-#         elif short_code == 'ln':
-#             print("Enter your password to login.")
-#             search_user = input()
-#             if check_existing_user(search_user):
-#                 find_credentials = find_user(find_user)
-#                 print("\033[1;32;1m   \n")
-#                 print(f"You are now logged in to your {user_name} account")
-#                 print("\033[1;37;1m   \n")
-#                 #========================================CREDENTIALS AREA=======================================================================
-#                 while True:
-#                     print('''
-#                     Use these short codes:
-#                     ca -> Create new credential.
-#                     dc -> Display your credentials list
-#                     ex ->Log out your credentials account.''')
-#                     short_code = input().lower()
-#                     if short_code == "ca":
-#                         print("Create new credential")
-#                         print('_' * 20)
-#                         credentials_name = input('Credential name:')
-#                         print('\n')
-#                         user_name = input(f"{credentials_name} user name:")
-#                         print('\n')
-#                         print('*' * 20)
-#                         password = input(f"{credentials_name} password:")
-#                         save_credentials(create_credentials(user_name, password, email))
+def main():
+    print("Hello welcome to password locker.What is your name")
+    user_name = input()
+    print(
+        f"Hello {user_name}, sign up to Password Locker to create an account.")
+    print('\n')
+    while True:
+        print("To continue please select one of these short codes :\n su for Sign Up.\n da for display your account.\n ln for login.\n ex for exit. ")
+        short_code = input().lower()
+        if short_code == 'su':
+            print("Create an  Account")
+            print("_"*100)
+            acc_name = input('Account name:')
+            print('\n')
+            user_name = input('User name:')
+            print('\n')
+            pwd = input('Password : ')
+            print('\n')
+            e_address = input('Email address:')
+            save_user(create_user(acc_name, user_name, pwd, e_address))
+            print('\n')
+            print(
+                f"A New {acc_name} Account with the user name  {user_name} has been created.")
+            print(
+                f"You can now login to your {acc_name} account using your password.")
+            print('\n')
+        elif short_code == 'da':
+            if display_user():
+                print("Thank you for signing up. here are your login credentials")
+                print('\n')
+                for user in display_user():
+                     print(
+                         f"User name:{user.acc_name}  User name: {user.user_name} Password:{user.password}")
+                     print('\n')
+            else:
+                print('\n')
+                print(
+                     "You dont seem to have created an account.Sign up to create a new account.")
+                print('\n')
+        elif short_code == 'ln':
+            print("Enter your password to login.")
+            search_user = input()
+            if check_existing_user(search_user):
+                find_credentials = find_user(find_user)
+                print("\033[1;32;1m   \n")
+                print(f"You are now logged in to your {user_name} account")
+                print("\033[1;37;1m   \n")
+                #========================================CREDENTIALS AREA=======================================================================
+                while True:
+                    print('''
+                    Use these short codes:
+                    ca -> Create new credential.
+                    dc -> Display your credentials list
+                    ex ->Log out your credentials account.''')
+                    short_code = input().lower()
+                    if short_code == "ca":
+                        print("Create new credential")
+                        print('_' * 20)
+                        credentials_name = input('Credential name:')
+                        print('\n')
+                        user_name = input(f"{credentials_name} user name:")
+                        print('\n')
+                        print('*' * 20)
+                        password = input(f"{credentials_name} password:")
+                        save_credentials(create_credentials(user_name, password, email))
                            
-#                         print('\n')
-#                         print(
-#                             f"A New {credentials_name} Account with the user name  {user_name} has been created.")
-#                         print('\n')
-#                     elif short_code == 'dc':
-#                         if display_credentials():
-#                              print("Here are your credentials details")
-#                              print('\n')
-#                              for credentials in display_credentials():
-#                                  print(
-#                                      f"Credential name:{credentials.credentials_name}  User name: {credentials.usr_name} Password:{credentials.password}")
-#                                  print('\n')
-#                         else:
-#                             print('\n')
-#                             print(
-#                                 "You do not have any account saved at the moment")
-#                             print('\n')
-#                     elif short_code == "ex":
-#                         print('\n')
-#                         print(
-#                             f"You have logged out your {user_name} account")
-#                         print("Bye see you some other time")
-#                         print('\n')
-#                         break
+                        print('\n')
+                        print(
+                            f"A New {credentials_name} Account with the user name  {user_name} has been created.")
+                        print('\n')
+                    elif short_code == 'dc':
+                        if display_credentials():
+                             print("Here are your credentials details")
+                             print('\n')
+                             for credentials in display_credentials():
+                                 print(
+                                     f"Credential name:{credentials.credentials_name}  User name: {credentials.usr_name} Password:{credentials.password}")
+                                 print('\n')
+                        else:
+                            print('\n')
+                            print(
+                                "You do not have any account saved at the moment")
+                            print('\n')
+                    elif short_code == "ex":
+                        print('\n')
+                        print(
+                            f"You have logged out your {user_name} account")
+                        print("Bye see you some other time")
+                        print('\n')
+                        break
 
-#             else:
-#                 print('\n')
-#                 print("invalid password!! please try again")
-#                 print('\n')
-#                 print('\n')
+            else:
+                print('\n')
+                print("invalid password!! please try again")
+                print('\n')
+                print('\n')
 
-#         elif short_code == "ex":
-#                 print(f"Thanks {user_name} for your time.I hope you enjoyed my service.Bye...")
-#                 break
+        elif short_code == "ex":
+                print(f"Thanks {user_name} for your time.I hope you enjoyed my service.Bye...")
+                break
                 
-#         else:
-#                    print("please use short codes to continue")
+        else:
+                   print("please use short codes to continue")
 
 
-# if __name__ == '__main__':
-#     main()
+if __name__ == '__main__':
+    main()
