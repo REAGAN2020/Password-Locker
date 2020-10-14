@@ -1,4 +1,4 @@
-<!-- # Password Locker
+# Password Locker
 
 ## Built By [Owiti Reagan](https://github.com/REAGAN2020/)
 
@@ -56,4 +56,4 @@ As a user I would like:
 * Python3.8
 
 ## License
-[MIT](LICENSE.md) © @OwitiReagan -->
+[MIT](LICENSE.md) © @OwitiReagan
